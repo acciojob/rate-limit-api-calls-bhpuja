@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
         clickCount++;
         clickCountDisplay.textContent = clickCount;
 
-        queue.push(() => fetch("https://jsonplaceholder.typicode.com/todos/1")
+        queue.push(() => fetch("https://jsonplaceholder.typicode.com/todos/1 ")
             .then(response => response.json())
             .then(data => {
                 const p = document.createElement("p");
-                p.textContent = `Fetched: ${data.title}`;
+                p.textContent = `ID: 1, Title: ${data.title}`;
                 resultsDiv.appendChild(p);
             })
             .catch(error => console.error("Error:", error))
